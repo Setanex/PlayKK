@@ -1,0 +1,8 @@
+url:
+  message: "(https?://[^\\s]+)"
+  out: "adressout"
+  cloudgoogle: "https://webrisk.googleapis.com/v1eap1:evaluateUri"
+phone:
+  bank: "8888888888"
+api:
+  key: "API_KEY"
