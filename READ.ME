@@ -1,0 +1,30 @@
+Zasada działania
+
+Aplikacja odbiera sms od operatora poprzez endpoint klasy SmsController 
+metodą receiveSms. W metodzie tej następuje odfiltrowanie
+sms i te spełniające warunki są dodawane do końca kolejki a pozostałe nie.
+Sms są odbierane cyklicznie za pomocą shedulera z początku kolejki i wysyłane poprzez klienta http do operatora.
+W Endpoint metoda addSubscriber dodaje nowych abonentów do tablicy BankSubscriber.
+Filtrowanie sms jest realizowany przez usługe google cloud.
+Opisy poszczególnych klas są umieszczone w kodzie.
+
+
+Projekt można oczywiście też skompilować i przetestować:
+
+Projekt pod JAVA ver. 17
+Spring Boot
+Baza wbudowana H2
+maven
+port 8081
+Uwaga. Przed kompilacją wykonać polecenie:
+export MAVEN_OPTS="--add-opens java.base/java.lang=ALL-UNNAMED"
+potem mvn clean install -DskipTests
+uruchomienie mvn spring-boot:run
+
+Link do projektu:
+https://github.com/Setanex/PlayKK.git
+
+Link do obrazu:
+docker pull ghcr.io/setanex/obrazplaykk:latest
+
+
